@@ -10,12 +10,8 @@ const Post=()=>{
     const[posts,setPosts]=useState([])
     const savedItem = localStorage.getItem("User");
     const token=localStorage.getItem("mytoken")
-    const[like,setLike]=useState(0)
+    const[like]=useState(0)
     const navigate=useNavigate()
-    const [user,setUser]=useState("")
-    useEffect(()=>{
-        setUser(savedItem)
-    })
 
     useEffect(()=>{
         fetch("https://varunac.pythonanywhere.com/post/",{
@@ -31,13 +27,13 @@ const Post=()=>{
             setPosts(result.filter(item=>item.user===savedItem))
         })
         .catch(error => console.log(error))
-    },[])
+    },[savedItem,token])
 
     
     return(
         <div id='post'>
             <div  id='post1'>
-                <Avatar style={{backgroundColor:"orange"}}>{user.charAt(0)}</Avatar>
+                <Avatar style={{backgroundColor:"orange"}}>{savedItem.charAt(0)}</Avatar>
                 <input id='post-input' type="text" placeholder='Start a post' onClick={()=>navigate("/createpost")}/>
             </div>
             <div id='postOptions'>
