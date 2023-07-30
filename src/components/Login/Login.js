@@ -11,7 +11,7 @@ const Login=()=>{
     const handlelogin = (e) => {
         e.preventDefault()
         localStorage.setItem("User",user)
-        fetch('http://varunac.pythonanywhere.com/dj-rest-auth/login/', {
+        fetch('https://varunac.pythonanywhere.com/dj-rest-auth/login/', {
             method:'POST',
             headers: {
                 'Content-Type':'application/json'

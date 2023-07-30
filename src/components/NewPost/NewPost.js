@@ -16,7 +16,7 @@ const NewPost=({message,image,video,like,postId})=>{
     const token=localStorage.getItem("mytoken")
 
     useEffect(()=>{
-        fetch(`http://varunac.pythonanywhere.com/post/${postId}/`,{
+        fetch(`https://varunac.pythonanywhere.com/post/${postId}/`,{
             method : 'GET',
             headers: {
                 'Content-Type':'application/json',
@@ -33,7 +33,7 @@ const NewPost=({message,image,video,like,postId})=>{
     },[])
 
     const handleClick2=()=>{
-        fetch(`http://varunac.pythonanywhere.com/comment/`, {
+        fetch(`https://varunac.pythonanywhere.com/comment/`, {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -43,7 +43,7 @@ const NewPost=({message,image,video,like,postId})=>{
 
         }).then(resp => resp.json())
 
-        fetch(`http://varunac.pythonanywhere.com/post/${postId}/`,{
+        fetch(`https://varunac.pythonanywhere.com/post/${postId}/`,{
             method : 'GET',
             headers: {
                 'Content-Type':'application/json',
@@ -78,7 +78,7 @@ const NewPost=({message,image,video,like,postId})=>{
     }
 
     const deletePost=()=>{
-        fetch(`http://varunac.pythonanywhere.com/post/${postId}/`,{
+        fetch(`https://varunac.pythonanywhere.com/post/${postId}/`,{
             method : 'DELETE',
             headers: {
                 'Content-Type':'application/json',

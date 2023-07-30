@@ -4,11 +4,6 @@ import '../CreateMedia/CreateMedia.css'
 import { useNavigate } from "react-router-dom";
 
 const CreateMedia=()=>{
-    const[body,setBody]=useState({
-        message : "",
-        image_url : "",
-        video_url : ""
-    })
     const [data,setData]=useState("")
     const[mediainput,setMediainput]=useState("")
     const[photo,setPhoto]=useState("")
@@ -51,7 +46,7 @@ const CreateMedia=()=>{
             navigate("/createmedia")
             return
         }
-        fetch('http://varunac.pythonanywhere.com/post/', {
+        fetch('https://varunac.pythonanywhere.com/post/', {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
