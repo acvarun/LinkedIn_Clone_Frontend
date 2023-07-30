@@ -1,0 +1,45 @@
+#loginDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+img{
+    height: 150px;
+    width: 300px;
+}
+
+.loginInput{
+    height: 35px;
+    width: 300px;
+    margin: 10px;
+}
+#loginDiv p{
+    margin-left: 50px;
+}
+.signbtn{
+    height: 35px;
+    width: 300px;
+    margin: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(66, 66, 214);
+    color: white;
+    border-color: rgb(66, 66, 214) ;
+    border-radius: 30px;
+}
+
+.btn{
+    background-color: transparent;
+    color: rgb(66, 66, 214);
+    border-color: transparent;
+}
+.err{
+    color: red;
+    font-size: 14px;
+    margin-left: 90px;
+}

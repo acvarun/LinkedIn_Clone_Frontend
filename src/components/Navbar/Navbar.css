@@ -1,0 +1,95 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 15%;
+    height: 30px;
+    align-items: center;
+    background-color: white;
+}
+#left{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+#left img{
+    height : 30px;
+    width: 30px;
+}
+#right{
+    display: flex;
+    flex-direction: row;
+}
+span{
+    font-size: 10px;
+}
+.iconBtn{
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    border-color: transparent;
+    width: 70px;
+    margin: 0px 5px;
+}
+.iconBtn:hover{
+    border-bottom-color: black;
+}
+.avatar-section{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.avatar-profile{
+    position: absolute;
+    top : 23px;
+    height : 120px;
+    width : 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    margin-left: -160px;
+}
+.avatar-section svg{
+    position: absolute;
+    top : 27px;
+    left : 27px;
+}
+#logoutbtn{
+    height: 60px;
+    width: 120px;
+    margin: 20px 0px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+   nav{
+    width : 100%;
+    padding : 10px 10px;
+   }
+}
+
+@media screen and (max-width: 767px) {
+    nav{
+        width : 100%;
+        padding : 10px 10px;
+    }
+    #left{
+        margin-right: 0;
+    }
+    #right button{
+        width: 30px;
+    }
+    #right span{
+        display: none;
+    }
+ }
+
