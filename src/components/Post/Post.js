@@ -18,7 +18,7 @@ const Post=()=>{
     })
 
     useEffect(()=>{
-        fetch("http://127.0.0.1:8000/post/",{
+        fetch("http://varunac.pythonanywhere.com/post/",{
             method : 'GET',
             headers: {
                 'Content-Type':'application/json',

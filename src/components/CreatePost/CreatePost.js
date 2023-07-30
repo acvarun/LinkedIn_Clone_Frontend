@@ -9,7 +9,7 @@ const CreatePost=()=>{
     const token=localStorage.getItem("mytoken")
     const navigate=useNavigate()
     const handlePost=()=>{
-        fetch('http://127.0.0.1:8000/post/', {
+        fetch('http://varunac.pythonanywhere.com/post/', {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
