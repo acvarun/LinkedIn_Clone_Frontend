@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import "./Navbar.css"
 import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
@@ -10,12 +10,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Navbar=()=>{
     const savedItem = localStorage.getItem("User");
-    const [user,setUser]=useState("")
     const [showlogout,setShowlogout]=useState(false)
     const navigate=useNavigate()
-    useEffect(()=>{
-        setUser(savedItem)
-    })
 
     const handleClick=()=>{
         localStorage.clear()
@@ -44,11 +40,11 @@ const Navbar=()=>{
                 <button className='iconBtn'><NotificationsIcon/><span>Notifications</span></button>
             </div>
             <div className='avatar-section' onClick={profileClick}>
-                <Avatar style={{backgroundColor:"orange"}}>{user.charAt(0)}</Avatar>
+                <Avatar style={{backgroundColor:"orange"}}>{savedItem.charAt(0)}</Avatar>
                 <ArrowDropDownIcon />
                 {showlogout && <div className='avatar-profile'>
-                    <Avatar style={{backgroundColor:"orange"}}>{user.charAt(0)}</Avatar>
-                    <h5>{user}</h5>
+                    <Avatar style={{backgroundColor:"orange"}}>{savedItem.charAt(0)}</Avatar>
+                    <h5>{savedItem}</h5>
                     <button id='logoutbtn' onClick={handleClick}>Logout</button>
                 </div>}
             </div>

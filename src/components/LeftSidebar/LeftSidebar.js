@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import "../LeftSidebar/LeftSidebar.css"
 import { Avatar } from '@mui/material';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
@@ -7,17 +7,13 @@ import AddIcon from '@mui/icons-material/Add';
 
 const LeftSidebar=()=>{
     const savedItem = localStorage.getItem("User");
-    const [user,setUser]=useState("")
-    useEffect(()=>{
-        setUser(savedItem)
-    })
     return(
         <div id='sidebar'>
             <div id='profile'>
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2gOp_o0HxgwsnD2iyj3XXC2eFq5Q8KyYD6A&usqp=CAU' alt='bg' />
                 <div id='profileDetails'>
-                    <Avatar style={{height:"50px",width:"50px",margin:"0px auto",backgroundColor:"orange"}}>{user.charAt(0)}</Avatar>
-                    <h5>{user}</h5>
+                    <Avatar style={{height:"50px",width:"50px",margin:"0px auto",backgroundColor:"orange"}}>{savedItem.charAt(0)}</Avatar>
+                    <h5>{savedItem}</h5>
                 </div>
             </div>
             <div id='connections'>

@@ -30,7 +30,7 @@ const NewPost=({message,image,video,like,postId})=>{
             setComment(arr.filter(item=>item.post===postId))
         })
         .catch(error => console.log(error))
-    },[])
+    },[postId,token])
 
     const handleClick2=()=>{
         fetch(`https://varunac.pythonanywhere.com/comment/`, {
