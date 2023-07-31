@@ -22,6 +22,7 @@ const Register=()=>{
         })
         .then((res) => {
             if (res.ok) {
+                navigate('/login')
               return res.json();
             } else {
               return res.json().then((data) => {
